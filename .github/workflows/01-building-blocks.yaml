@@ -1,6 +1,5 @@
-on:
-  push:
-  workflow_dispatch:
+name: 01-Building Blocks
+on: push
 jobs:
   echo-hello:
     runs-on: ubuntu-latest
@@ -13,5 +12,6 @@ jobs:
       - name: Failed Step
         run: |
           echo "I will fail"
+          exit 1
       - name: Say goodbye
         run: echo "Goodbye!"
